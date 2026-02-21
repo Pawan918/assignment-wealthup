@@ -64,7 +64,7 @@ export default function Home() {
       />
       <main className="flex min-h-screen w-full max-w-326.75 flex-col gap-8 items-center sm:items-start">
         <header className="w-full flex justify-between text-brand-primary">
-          <div className="font-['Inter']">
+          <div className="font-['Inter'] text-center md:text-left">
             <h2 className="text-[28px]">
               Good Morning, <span className="font-bold">Ankit</span>
             </h2>
@@ -73,25 +73,28 @@ export default function Home() {
               but your wealth efficiency is lagging.{" "}
             </h3>
           </div>
-          <div className="flex items-center">
+          <div className="hidden md:flex items-center">
             <Badge variant="success" className="flex gap-2">
               <VerifiedShieldIcon size={24} /> Verified Analysis
             </Badge>
           </div>
         </header>
-        <BaseCard className="w-full flex justify-between relative z-10 overflow-hidden">
-          <div className="flex items-end my-4.5">
+        <BaseCard className="w-full flex flex-col md:flex-row justify-between relative z-10 overflow-hidden">
+          <div className="flex items-center md:items-end my-4.5">
             <WealthScoreGauge score={43} targetScore={70} />
           </div>
           <div className="flex flex-col gap-8">
             <FinanceCompareCard current={65} potential={38} />
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 items-center lg:items-start">
               <h2 className="text-brand-primary text-[20px]">
                 Your score breakdown
               </h2>
-              <div className="grid grid-cols-3 gap-y-10 gap-x-5 w-fit">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-5 w-fit">
                 {metrics.map((metric, index) => (
-                  <div key={metric.title} className="flex items-center gap-5">
+                  <div
+                    key={metric.title}
+                    className="flex gap-2 items-center lg:gap-5"
+                  >
                     <MetricBar title={metric.title} score={metric.score} />
                     {(index + 1) % 3 !== 0 && (
                       <div className="h-9.5 w-0.5 bg-border-muted self-center" />
@@ -116,7 +119,7 @@ export default function Home() {
               <span className="font-bold">70+ WealthUp</span> score
             </h2>
           </div>
-          <div className="flex flex-col sm:flex-row gap-6">
+          <div className="flex flex-col lg:flex-row gap-6">
             {roadmapData.map((data, index) => (
               <StepCard key={index} data={data} />
             ))}
