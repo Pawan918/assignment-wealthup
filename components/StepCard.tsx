@@ -2,20 +2,9 @@
 
 import Image from "next/image";
 import { useState } from "react";
-interface StepCardProps {
-  step: number;
-  status: "Critical" | "Warning" | "Good" | "Completed";
-  title: string;
-  description: string;
-  points: string;
-  actionText: string;
-  isLocked: boolean;
-  showSelection: boolean;
-  showFunds: boolean;
-  isExpress: boolean;
-}
+import type { StepData } from "@/types/step";
 
-const StepCard = ({ data }: { data: StepCardProps }) => {
+const StepCard = ({ data }: { data: StepData }) => {
   const [selectedAmount, setSelectedAmount] = useState("₹500");
   const amounts = ["₹500", "₹1,000", "₹5,000", "₹6,000"];
   const recommendedFunds = [

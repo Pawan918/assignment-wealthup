@@ -5,9 +5,10 @@ import Badge from "@/components/ui/Badge";
 import BaseCard from "@/components/ui/BaseCard";
 import { MetricBar } from "@/components/ui/MetricBar";
 import WealthScoreGauge from "@/components/ui/WealthScoreGuage";
+import type { StepData } from "@/types/step";
 import Image from "next/image";
 
-const roadmapData = [
+const roadmapData: StepData[] = [
   {
     step: 1,
     status: "Critical",
