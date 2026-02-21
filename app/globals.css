@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --white: #ffffff;
+  --black: #000000;
+
+  --brand-primary: #294f7c;
+  --brand-secondary: #4b90e2;
+  --brand-tertiary: #307ed9;
+  --brand-soft: #48688e;
+
+  --text-title: #374e6a;
+  --text-body: #4c6179;
+  --text-strong: #363636;
+  --text-emphasis: #4b4b4b;
+  --text-muted-strong: #4c4c4c;
+  --text-muted: #696969;
+  --text-secondary-strong: #616161;
+  --text-secondary: #7c7c7c;
+  --text-tertiary: #828282;
+  --text-icon: #7a7a7a;
+  --text-subtle: #585858;
+  --text-placeholder: #818181;
+  --ink-strong: #1b212c;
+
+  --surface-base: #f8fafc;
+  --surface-overlay: #f8fafc33;
+  --surface-muted: #f6f6f6;
+  --surface-track: #f7f7f7;
+  --surface-elevated: #f9f9f9;
+  --surface-accent: #eaf4fb;
+  --surface-tint: #d2e3f780;
+  --surface-highlight: #e6f2ff;
+  --surface-success: #e2ffe2;
+
+  --border-default: #d9d9d9;
+  --border-muted: #d4d4d4;
+  --border-soft: #dddddd;
+  --border-divider: #dadada;
+
+  --status-success: #00ba00;
+  --status-success-dark: #098309;
+  --status-danger: #ff0000;
+
+  --score-low: #ff6a6a;
+  --score-low-soft: #ff6969;
+  --score-mid: #ffbc70;
+  --score-high: #7eff7e;
+
+  --page-gradient-start: #ecf4fb;
+  --page-gradient-end: #f8fafc;
+
+  --shadow-brand-50: #4a90e280;
+  --shadow-brand-25: #4a90e240;
+  --shadow-brand-primary-15: rgba(41, 79, 124, 0.15);
+  --shadow-ink-12: #1b212c1f;
+  --shadow-ink-7: rgba(27, 33, 44, 0.07);
+  --shadow-black-5: #0000000d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-white: var(--white);
+  --color-black: var(--black);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-tertiary: var(--brand-tertiary);
+  --color-brand-soft: var(--brand-soft);
+  --color-text-title: var(--text-title);
+  --color-text-body: var(--text-body);
+  --color-text-strong: var(--text-strong);
+  --color-text-emphasis: var(--text-emphasis);
+  --color-text-muted-strong: var(--text-muted-strong);
+  --color-text-muted: var(--text-muted);
+  --color-text-secondary-strong: var(--text-secondary-strong);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-icon: var(--text-icon);
+  --color-text-subtle: var(--text-subtle);
+  --color-text-placeholder: var(--text-placeholder);
+  --color-ink-strong: var(--ink-strong);
+  --color-surface-base: var(--surface-base);
+  --color-surface-overlay: var(--surface-overlay);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-track: var(--surface-track);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-accent: var(--surface-accent);
+  --color-surface-tint: var(--surface-tint);
+  --color-surface-highlight: var(--surface-highlight);
+  --color-surface-success: var(--surface-success);
+  --color-border-default: var(--border-default);
+  --color-border-muted: var(--border-muted);
+  --color-border-soft: var(--border-soft);
+  --color-border-divider: var(--border-divider);
+  --color-status-success: var(--status-success);
+  --color-status-success-dark: var(--status-success-dark);
+  --color-status-danger: var(--status-danger);
+  --color-score-low: var(--score-low);
+  --color-score-low-soft: var(--score-low-soft);
+  --color-score-mid: var(--score-mid);
+  --color-score-high: var(--score-high);
+  --color-page-gradient-start: var(--page-gradient-start);
+  --color-page-gradient-end: var(--page-gradient-end);
+  --color-shadow-brand-50: var(--shadow-brand-50);
+  --color-shadow-brand-25: var(--shadow-brand-25);
+  --color-shadow-brand-primary-15: var(--shadow-brand-primary-15);
+  --color-shadow-ink-12: var(--shadow-ink-12);
+  --color-shadow-ink-7: var(--shadow-ink-7);
+  --color-shadow-black-5: var(--shadow-black-5);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif, 'Urbanist', sans-serif;
+}
