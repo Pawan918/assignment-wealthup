@@ -80,7 +80,7 @@ export default function Home() {
           </div>
         </header>
         <BaseCard className="w-full flex flex-col md:flex-row justify-between relative z-10 overflow-hidden">
-          <div className="flex items-center md:items-end my-4.5">
+          <div className="flex justify-center items-end my-4.5">
             <WealthScoreGauge score={43} targetScore={70} />
           </div>
           <div className="flex flex-col gap-8">
@@ -97,7 +97,7 @@ export default function Home() {
                   >
                     <MetricBar title={metric.title} score={metric.score} />
                     {(index + 1) % 3 !== 0 && (
-                      <div className="h-9.5 w-0.5 bg-border-muted self-center" />
+                      <div className="hidden md:block h-9.5 w-0.5 bg-border-muted self-center" />
                     )}
                   </div>
                 ))}

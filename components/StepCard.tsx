@@ -26,7 +26,7 @@ const StepCard = ({ data }: { data: StepData }) => {
 
   return (
     <div
-      className={`flex flex-col items-start px-5 py-4 gap-5 rounded-[20px] border transition-all justify-between ${
+      className={`flex flex-col items-start px-5 py-4 gap-5 rounded-[20px] border transition-all justify-between min-h-130 ${
         !data.isLocked
           ? "bg-white border-brand-primary shadow-[0px_0px_12px_rgba(41,79,124,0.15)]"
           : "bg-[#F6F6F6] border-[#DDDDDD]"
@@ -64,7 +64,7 @@ const StepCard = ({ data }: { data: StepData }) => {
               <button
                 key={amt}
                 onClick={() => setSelectedAmount(amt)}
-                className={`px-3 py-1.5 rounded-sm border text-[12px] font-semibold transition-colors cursor-pointer ${
+                className={`px-1 md:px-3 py-1.5 rounded-sm border text-[12px] font-semibold transition-colors cursor-pointer ${
                   selectedAmount === amt
                     ? "bg-[#E6F2FF] border-brand-primary text-[#363636]"
                     : "border-[#D9D9D9] text-[#585858]"

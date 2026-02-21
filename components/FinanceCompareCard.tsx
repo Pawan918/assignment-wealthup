@@ -9,7 +9,7 @@ export const FinanceCompareCard = ({ current, potential }: TrajectoryProps) => {
   const sooner = current - potential;
 
   return (
-    <div className="flex gap-3 flex-col">
+    <div className="flex gap-3 flex-col items-center lg:items-start">
       <h2 className="text-brand-primary text-[20px]">Financial independence age</h2>
       <div className="relative flex flex-row items-center">
         <div className="flex flex-col justify-center items-center w-52.5 h-32.75 p-[12px_8px] gap-2.5 bg-[#F9F9F9] border-y border-l border-white rounded-l-lg shadow-[0px_0px_24px_0px_#4A90E240] z-0">
